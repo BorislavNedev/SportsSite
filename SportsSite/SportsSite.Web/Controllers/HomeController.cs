@@ -1,16 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SportsSite.Web.Controllers
+﻿namespace SportsSite.Web.Controllers
 {
-    public class HomeController : Controller
+    using SportsSite.Web.Models;
+    using System.Linq;
+    using System.Web.Mvc;
+
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
-            var listOfArticles = this.
+            var listOfArticles = this.Data.Articles
+                .All()
+                .OrderByDescending(x => x.Date)
+                .Select(x => new ArticleConciseViewModel
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Date = x.Date.ToString(),
+                    ImageUrl = x.ImageUrl
+                });
+            return View(listOfArticles);
+            
         }        
     }
 }

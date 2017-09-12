@@ -5,17 +5,14 @@
     using System.Linq;
     using System.Web;
 
-    public class ArticleViewModel
+    public class ArticleConciseViewModel
     {
         public int Id { get; set; }
         
         public string Title { get; set; }
         
-        public string Content { get; set; }
-
-        public string Date { get; set; }
-
         public string ImageUrl { get; set; }
 
+        public string Date { get; set; }
     }
 }
