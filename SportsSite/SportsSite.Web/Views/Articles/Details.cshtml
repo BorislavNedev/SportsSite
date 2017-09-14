@@ -1,0 +1,17 @@
+﻿@model SportsSite.Web.Models.ArticleFullViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+    <div class="col-md-10">
+        <h1>@Model.Title</h1>
+        <div><em>@Model.Date</em></div>
+        <div><em>@Model.Category</em></div>
+        <img src="@Model.ImageUrl" style="width:80%; height:80% " />
+        <div>@Model.Content</div>
+    </div>
+</div>
+
+
+

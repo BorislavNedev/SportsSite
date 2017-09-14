@@ -1,0 +1,23 @@
+﻿@model IEnumerable<SportsSite.Web.Models.ArticleConciseViewModel>
+
+@{
+    ViewBag.Title = "Tennis Articles";
+}
+<br />
+@for (int i = 0; i < Model.Count(); i++)
+{
+    var article = Model.ElementAt(i);
+
+    <div class="row">
+        <a href="@Url.Action("Details", "Articles", new { article.Id })">
+            <div class="col-md-4" align="right">
+                <img src="@article.ImageUrl" style="width:75%; height:75%" />
+            </div>
+            <div class="col-md-8">
+                <h4>@article.Title</h4>
+                <div>@article.Date</div>
+            </div>
+        </a>
+    </div>
+    <br />
+}
