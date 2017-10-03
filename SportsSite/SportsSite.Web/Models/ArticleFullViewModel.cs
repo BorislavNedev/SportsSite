@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace SportsSite.Web.Models
+﻿namespace SportsSite.Web.Models
 {
+    using System.Collections.Generic;
+
     public class ArticleFullViewModel
     {
         public int Id { get; set; }
@@ -18,5 +15,7 @@ namespace SportsSite.Web.Models
         public string ImageUrl { get; set; }
 
         public string Category { get; set; }
+
+        public ICollection<CommentViewModel> Comments { get; set; }
     }
 }

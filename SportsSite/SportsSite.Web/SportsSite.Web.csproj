@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticlesAdministrationController.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -206,7 +207,9 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArticleConciseViewModel.cs" />
     <Compile Include="Models\ArticleFullViewModel.cs" />
+    <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SubmitCommentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -228,6 +231,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -278,6 +283,12 @@
     <Content Include="Views\Articles\BasketballArticles.cshtml" />
     <Content Include="Views\Articles\OtherArticles.cshtml" />
     <Content Include="Views\Articles\MotorSportsArticles.cshtml" />
+    <Content Include="Views\Shared\_CommentPartial.cshtml" />
+    <Content Include="Views\ArticlesAdministration\Create.cshtml" />
+    <Content Include="Views\ArticlesAdministration\Delete.cshtml" />
+    <Content Include="Views\ArticlesAdministration\Details.cshtml" />
+    <Content Include="Views\ArticlesAdministration\Edit.cshtml" />
+    <Content Include="Views\ArticlesAdministration\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

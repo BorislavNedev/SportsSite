@@ -11,10 +11,12 @@ namespace SportsSite.Models
         [MaxLength(1000)]
         public string Content { get; set; }
 
+        [Required]
         public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }
 
+        [Required]
         public int ArticleId { get; set; }
 
         public virtual Article Article { get; set; }

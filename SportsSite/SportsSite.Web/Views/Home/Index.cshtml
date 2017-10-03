@@ -9,18 +9,16 @@
     @for (int i = 0; i < 6; i++)
     {
         var article = Model.ElementAt(i);
-
         <a href="@Url.Action("Details", "Articles", new { article.Id })">
             <div class="col-md-4">
                 <div style="height:40px">
                     <h4>@article.Title</h4>
                 </div>
-                <div>
-                    <img src="@article.ImageUrl" style="width:100%; height:100% " />
+                <div>               
+                    <img src="@article.ImageUrl" style="width:100%; height:100% " />               
                 </div>
             </div>
-        </a>
-
+         </a>
         if (i > 0 && (i + 1) % 3 == 0)
         {
             @: </div>

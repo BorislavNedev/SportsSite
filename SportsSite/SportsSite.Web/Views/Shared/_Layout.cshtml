@@ -15,6 +15,15 @@
                 <div class="navbar-header" >
                     @Html.ActionLink("SPORT.BG", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })                    
                 </div>
+                <div>
+
+                </div>
+                <ul class="nav navbar-nav navbar-left">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("ADMINISTRATION", "Index", "ArticlesAdministration")</li>
+                    }
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>@Html.Partial("_LoginPartial")</li>
                 </ul>
